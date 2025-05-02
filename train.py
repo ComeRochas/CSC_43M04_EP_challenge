@@ -37,7 +37,7 @@ def train(cfg):
     for epoch in tqdm(range(cfg.epochs), desc="Epochs"):
         # -- loop over training batches
         model.train()
-        epoch_train_loss = 1
+        epoch_train_loss = 0
         num_samples_train = 0
         pbar = tqdm(train_loader, desc=f"Epoch {epoch}", leave=False)
         for i, batch in enumerate(pbar):
